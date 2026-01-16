@@ -7,4 +7,4 @@ all: copy
 
 copy:
 	@mkdir -p $(DEST)
-	@rsync -av --include='*/' --include='*.html' --include='assets/**' --exclude='.*' ./ $(DEST)
+	@rsync -av --exclude=".*" --include='*/' --include='*.html' --include='assets/**' --exclude='*' ./ $(DEST)
